@@ -70,7 +70,7 @@
 
              mvn validate -Pregen-kogito -N
         -->
-        <kogito-quarkus.version>0.15.0</kogito-quarkus.version>
+        <kogito-quarkus.version>1.0.0.Final</kogito-quarkus.version>
         <optaplanner-quarkus.version>7.43.0.Final</optaplanner-quarkus.version>
         <testcontainers.version>1.14.3</testcontainers.version>
 
@@ -79,6 +79,36 @@
         <groovy-maven-plugin.version>2.1.1</groovy-maven-plugin.version>
         <useReleaseProfile>true</useReleaseProfile>
     </properties>
+
+    <repositories>
+        <repository>
+            <id>central</id>
+            <name>Central</name>
+            <url>https://repo.maven.apache.org/maven2/</url>
+            <releases>
+                <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
+            </releases>
+            <snapshots>
+                <enabled>false</enabled>
+                <updatePolicy>never</updatePolicy>
+            </snapshots>
+        </repository>
+        <repository>
+            <id>kogito-staging-repository-group</id>
+            <name>Kogito Staging Repositories</name>
+            <url>https://repository.jboss.org/nexus/content/repositories/jboss_releases_staging_profile-17411</url>
+            <layout>default</layout>
+              <releases>
+                <enabled>true</enabled>
+                <updatePolicy>never</updatePolicy>
+              </releases>
+              <snapshots>
+                <enabled>false</enabled>
+                <updatePolicy>never</updatePolicy>
+              </snapshots>
+        </repository>
+    </repositories>
 
     <modules>
         <module>bom</module>
