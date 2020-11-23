@@ -94,6 +94,7 @@
                 <updatePolicy>never</updatePolicy>
             </snapshots>
         </repository>
+
         <repository>
             <id>kogito-staging-repository-group</id>
             <name>Kogito Staging Repositories</name>
